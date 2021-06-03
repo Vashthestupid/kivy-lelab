@@ -1,0 +1,113 @@
+<MainWidget>:
+    Button:
+        text: "Hello"
+        size: "100dp", "60dp"
+        pos: "200dp", "100dp"
+        color: 0,0,1,1
+    Label:
+        text: "Hello2"
+        size: "100dp", "60dp"
+        pos: "100dp", "200dp"
+        color: 1,0,0,1
+
+<AnchorLayoutExemple>:
+    # right, left, center
+    # top, bottom, center
+    anchor_x: "right"
+    anchor_y: "bottom"
+
+BoxLayout:
+    size_hint: 1,1
+    Button:
+        text: "A"
+    Button:
+        text: "B"
+        size_hint: .1,.1
+        pos_hint: {"top": 0.7}
+
+<GridLayoutExemple>:
+    #rows
+    #cols
+    cols: 3
+    spacing: "10dp"
+    Button:
+        text:"A"
+        size_hint: None,1
+        width: "60dp"
+    BoxLayoutExemple:
+        text:"B"
+    Button:
+        text:"C"
+    Button:
+        text:"D"
+        size_hint: None,1
+        width: "60dp"
+    Button:
+        text:"E"
+    Button:
+        text:"F"
+
+<StackLayoutExemple>:
+    # "left-right, top-bottom"
+    # orientation: "rl-bt"
+    # padding: ("20dp", "20dp", "20dp", "20dp")
+    # spacing: "20dp", "20dp"
+
+<BoxLayoutExemple>:
+    orientation: "horizontal"
+    spacing: "10dp"
+    Button:
+        text: "A"
+        size_hint: 0.5, 1
+        # size: "100dp", "50dp"
+        # x, right, center_x
+        # y, top, center_y
+        #pos_hint: {"right": .75}
+    BoxLayout:
+        spacing: "20dp"
+        Button:
+            text: "B1"
+        Button:
+            text: "B2"
+        Button:
+            text: "B3"
+        Button:
+            text: "B4"
+    Button:
+        text: "C"
+        size_hint: .3, 1
+
+<PageLayoutExemple@PageLayout>:
+    MainWidget:
+    BoxLayoutExemple:
+    AnchorLayoutExemple:
+    GridLayoutExemple:
+
+<ScrollViewExemple@ScrollView>
+    StackLayoutExemple:
+        size_hint: 1,None
+        height: self.minimum_height
+
+<LayoutsExempleTabs@TabbedPanel>:
+    do_default_tab: False
+    TabbedPanelItem:
+        text: "Widget"
+        MainWidget:
+    TabbedPanelItem:
+        text: "Box"
+        BoxLayoutExemple:
+    TabbedPanelItem:
+        text: "Anchor"
+        AnchorLayoutExemple:
+    TabbedPanelItem:
+        text: "Stack"
+        StackLayoutExemple:
+    TabbedPanelItem:
+        text: "Grid"
+        GridLayoutExemple:
+    TabbedPanelItem:
+        text: "Scroll"
+        ScrollViewExemple:
+    TabbedPanelItem:
+        text: "Page"
+        PageLayoutExemple:
