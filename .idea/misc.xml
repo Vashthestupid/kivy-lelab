@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectPlainTextFileTypeManager">
     <file url="file://$PROJECT_DIR$/boxlayout_with_action_bar.kv" />
+    <file url="file://$PROJECT_DIR$/canvas_exemple.kv" />
     <file url="file://$PROJECT_DIR$/layout_exemples.kv" />
     <file url="file://$PROJECT_DIR$/lelab.kv" />
     <file url="file://$PROJECT_DIR$/widget_exemples.kv" />

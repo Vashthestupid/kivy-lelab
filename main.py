@@ -9,6 +9,7 @@ from kivy.uix.stacklayout import StackLayout
 from kivy.metrics import dp
 
 from navigation_screen_manager import NavigationScreenManager
+from canvas_exemple import *
 
 
 class MyScreenManager(NavigationScreenManager):
@@ -21,6 +22,7 @@ class LelabApp(App):
     def build(self):
         self.manager = MyScreenManager()
         return self.manager
+        # return CanvasExemple7()
 
 
 LelabApp().run()

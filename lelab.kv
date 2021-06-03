@@ -1,12 +1,13 @@
 #:import layout_exemples layout_exemples
 #:import widget_exemples widget_exemples
+#:import canvas_exemple canvas_exemple
 #:import navigation_screen_manager navigation_screen_manager
 #:import boxlayout_with_action_bar boxlayout_with_action_bar
 
 <MenuPrincipal@BoxLayout>:
     orientation: "vertical"
     Button:
-        text: "layouts"
+        text: "Layouts"
         on_press: app.manager.push("LayoutsExempleTabs")
     Button:
         text: "Widgets"
@@ -14,6 +15,9 @@
     Button:
         text: "Images"
         on_press: app.manager.push("ImagesExemple")
+    Button:
+        text: "Canvas"
+        on_press: app.manager.push("CanvasExemple")
 
 <MyScreenManager>:
     Screen:
@@ -34,6 +38,11 @@
         BoxLayoutWithActionBar:
             title: "PageLayoutExemple"
             LayoutsExempleTabs:
+    Screen:
+        name: "CanvasExemple"
+        BoxLayoutWithActionBar:
+            title: "CanvasExemple1"
+            CanvasExemple:
 
 
 
